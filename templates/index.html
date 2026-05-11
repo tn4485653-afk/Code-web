@@ -372,7 +372,7 @@
 
         }
 
-        input{
+        input, select {
 
             width:100%;
 
@@ -394,7 +394,13 @@
 
         }
 
-        input:focus{
+        /* Tùy chỉnh màu chữ cho option của select */
+        select option {
+            background-color: #1a1a1a;
+            color: #fff;
+        }
+
+        input:focus, select:focus {
 
             border-color:#0070f3;
 
@@ -613,6 +619,22 @@
             <input type="text"
             placeholder="UID 5">
 
+            <!-- MENU BIẾN HÌNH -->
+            <select id="skin-select">
+                <option value="">-- Chọn Biến Hình --</option>
+                <option value="914000002">Rampage</option>
+                <option value="914000003">Cannibal</option>
+                <option value="914038001">Devil</option>
+                <option value="914039001">Scorpio</option>
+                <option value="914042001">Frostfire</option>
+                <option value="914044001">Paradox</option>
+                <option value="914047001">Naruto</option>
+                <option value="914047002">Aurora</option>
+                <option value="914048001">Midnight</option>
+                <option value="914050001">Itachi</option>
+                <option value="91">Dreamspace</option>
+            </select>
+
             <button class="btn-submit"
             onclick="startEmote()">
 
@@ -771,6 +793,8 @@
             document.querySelectorAll(
             "#modal-emote input"
             );
+            
+            const skinSelect = document.getElementById('skin-select');
 
             await callAPI("/api/emote",{
 
@@ -780,7 +804,9 @@
                 uid2:inputs[2].value,
                 uid3:inputs[3].value,
                 uid4:inputs[4].value,
-                uid5:inputs[5].value
+                uid5:inputs[5].value,
+                
+                skin: skinSelect.value // Thêm giá trị biến hình vào payload
 
             });
 
