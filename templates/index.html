@@ -45,448 +45,215 @@
 
         body{
 
-            font-family:
-            'Inter',
-            sans-serif;
+            font-family:'Inter', sans-serif;
 
             background:
-
-            linear-gradient(
-            rgba(0,0,0,0.6),
-            rgba(0,0,0,0.6)
-            ),
-
-            url(
-            'https://files.catbox.moe/ishnb2.jpeg'
-            );
+            linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+            url('https://files.catbox.moe/ishnb2.jpeg');
 
             background-size:cover;
-
             background-position:center;
-
             background-attachment:fixed;
 
             color:#fff;
-
             min-height:100vh;
-
             display:flex;
-
             flex-direction:column;
-
             overflow-x:hidden;
 
         }
 
         nav{
-
             width:100%;
-
             padding:20px;
-
             text-align:center;
-
             position:fixed;
-
             top:0;
-
             z-index:100;
-
             backdrop-filter:blur(10px);
-
-            background:
-            rgba(0,0,0,0.2);
-
+            background:rgba(0,0,0,0.2);
         }
 
         .logo{
-
             font-size:1.8rem;
-
             font-weight:900;
-
             letter-spacing:3px;
-
-            background:
-            var(--hologram-gradient);
-
+            background:var(--hologram-gradient);
             background-size:400% 400%;
-
             -webkit-background-clip:text;
-
             -webkit-text-fill-color:transparent;
-
-            animation:
-            hologram-shift 5s linear infinite;
-
+            animation:hologram-shift 5s linear infinite;
         }
 
         .container{
-
             flex:1;
-
             display:flex;
-
             flex-direction:column;
-
             justify-content:center;
-
             align-items:center;
-
             padding:20px;
-
             margin-top:60px;
-
         }
 
         .header-section{
-
             text-align:center;
-
             margin-bottom:40px;
-
         }
 
         .brand-name{
-
             font-size:3rem;
-
             font-weight:900;
-
             text-transform:uppercase;
-
-            background:
-            var(--hologram-gradient);
-
+            background:var(--hologram-gradient);
             background-size:400% 400%;
-
             -webkit-background-clip:text;
-
             -webkit-text-fill-color:transparent;
-
-            animation:
-            hologram-shift 5s linear infinite;
-
+            animation:hologram-shift 5s linear infinite;
             margin-bottom:5px;
-
         }
 
         .status-badge{
-
             font-size:0.7rem;
-
-            background:
-            rgba(0,255,128,0.2);
-
+            background:rgba(0,255,128,0.2);
             color:#00ff80;
-
             padding:4px 12px;
-
             border-radius:20px;
-
-            border:
-            1px solid #00ff80;
-
+            border:1px solid #00ff80;
             text-transform:uppercase;
-
             letter-spacing:1px;
-
         }
 
         .menu-grid{
-
             display:flex;
-
             flex-direction:column;
-
             gap:15px;
-
             width:100%;
-
             max-width:320px;
-
         }
 
         .menu-item{
-
             cursor:pointer;
-
-            background:
-            var(--glass-bg);
-
+            background:var(--glass-bg);
             backdrop-filter:blur(15px);
-
-            border:
-            1px solid var(--glass-border);
-
+            border:1px solid var(--glass-border);
             padding:20px;
-
             border-radius:18px;
-
             color:white;
-
             display:flex;
-
             align-items:center;
-
             transition:0.3s;
-
         }
 
-        .menu-item:active{
-
-            transform:scale(0.95);
-
-        }
+        .menu-item:active{transform:scale(0.95);}
 
         .menu-item i{
-
             font-size:1.5rem;
-
             margin-right:20px;
-
             width:30px;
-
             text-align:center;
-
-            background:
-            var(--hologram-gradient);
-
+            background:var(--hologram-gradient);
             -webkit-background-clip:text;
-
             -webkit-text-fill-color:transparent;
-
         }
 
-        .menu-text h3{
-
-            font-size:1.1rem;
-
-            font-weight:700;
-
-        }
-
-        .menu-text p{
-
-            font-size:0.75rem;
-
-            color:
-            rgba(255,255,255,0.5);
-
-        }
+        .menu-text h3{font-size:1.1rem;font-weight:700;}
+        .menu-text p{font-size:0.75rem;color:rgba(255,255,255,0.5);}
 
         .modal{
-
             position:fixed;
-
-            top:0;
-            left:0;
-
-            width:100%;
-            height:100%;
-
+            top:0;left:0;
+            width:100%;height:100%;
             display:none;
-
             justify-content:center;
-
             align-items:center;
-
             z-index:2000;
-
             padding:20px;
-
             backdrop-filter:blur(20px);
-
-            background:
-            rgba(0,0,0,0.4);
-
+            background:rgba(0,0,0,0.4);
         }
 
         .modal-content{
-
-            background:
-
-            linear-gradient(
-            rgba(0,0,0,0.8),
-            rgba(0,0,0,0.8)
-            ),
-
-            url(
-            'https://files.catbox.moe/ishnb2.jpeg'
-            );
-
+            background:linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)),
+            url('https://files.catbox.moe/ishnb2.jpeg');
             background-size:cover;
-
             background-position:center;
-
-            border:
-            1px solid var(--glass-border);
-
+            border:1px solid var(--glass-border);
             padding:30px;
-
             border-radius:25px;
-
             width:100%;
-
             max-width:380px;
-
             position:relative;
-
-            box-shadow:
-            0 20px 50px rgba(0,0,0,0.5);
-
+            box-shadow:0 20px 50px rgba(0,0,0,0.5);
         }
 
         .modal-header{
-
             font-weight:800;
-
             font-size:1.3rem;
-
             margin-bottom:25px;
-
             display:flex;
-
             justify-content:space-between;
-
             align-items:center;
-
             letter-spacing:1px;
-
-            background:
-            var(--hologram-gradient);
-
+            background:var(--hologram-gradient);
             -webkit-background-clip:text;
-
             -webkit-text-fill-color:transparent;
-
         }
 
-        .modal-header i{
+        .modal-header i{cursor:pointer;color:#fff;font-size:1.5rem;}
 
-            cursor:pointer;
-
-            color:#fff;
-
-            font-size:1.5rem;
-
-        }
-
-        input, select {
-
+        input,select{
             width:100%;
-
             padding:14px;
-
             margin-bottom:12px;
-
             border-radius:12px;
-
-            border:
-            1px solid var(--glass-border);
-
-            background:
-            rgba(0,0,0,0.4);
-
+            border:1px solid var(--glass-border);
+            background:rgba(0,0,0,0.4);
             color:white;
-
             outline:none;
-
         }
 
-        /* Tùy chỉnh màu chữ cho option của select */
-        select option {
-            background-color: #1a1a1a;
-            color: #fff;
-        }
+        select option{background:#1a1a1a;color:#fff;}
 
-        input:focus, select:focus {
-
-            border-color:#0070f3;
-
-        }
+        input:focus,select:focus{border-color:#0070f3;}
 
         .btn-submit{
-
             width:100%;
-
             padding:15px;
-
             border-radius:12px;
-
             border:none;
-
-            background:
-            var(--hologram-gradient);
-
+            background:var(--hologram-gradient);
             color:white;
-
             font-weight:800;
-
             cursor:pointer;
-
             margin-top:10px;
-
             text-transform:uppercase;
-
         }
 
         #toast{
-
             position:fixed;
-
             top:25px;
-
             right:-350px;
-
-            background:
-            var(--hologram-gradient);
-
+            background:var(--hologram-gradient);
             padding:15px 30px;
-
             border-radius:12px;
-
             font-weight:800;
-
             z-index:3000;
-
             transition:0.6s;
-
         }
 
-        #toast.show{
-
-            right:20px;
-
-        }
+        #toast.show{right:20px;}
 
         .footer{
-
             margin-top:30px;
-
             font-size:12px;
-
-            color:
-            rgba(255,255,255,0.5);
-
+            color:rgba(255,255,255,0.5);
             text-align:center;
-
         }
 
-        @keyframes hologram-shift {
-
-            0%{
-                background-position:0% 50%;
-            }
-
-            50%{
-                background-position:100% 50%;
-            }
-
-            100%{
-                background-position:0% 50%;
-            }
-
+        @keyframes hologram-shift{
+            0%{background-position:0% 50%;}
+            50%{background-position:100% 50%;}
+            100%{background-position:0% 50%;}
         }
 
     </style>
@@ -495,376 +262,123 @@
 
 <body>
 
-    <nav>
-
-        <div class="logo">
-            M4
-        </div>
-
-    </nav>
-
-    <div class="container">
-
-        <div class="header-section">
-
-            <h1 class="brand-name">
-                m4 status
-            </h1>
-
-            <span class="status-badge">
-
-                <i class="fa-solid fa-circle-check"></i>
-
-                Đang hoạt động !
-
-            </span>
-
-        </div>
-
-        <div class="menu-grid">
-
-            <!-- EMOTE -->
-
-            <div class="menu-item"
-            onclick="openModal('modal-emote')">
-
-                <i class="fa-solid fa-face-grin-tears"></i>
-
-                <div class="menu-text">
-
-                    <h3>Emote</h3>
-
-                    <p>Team Code & 5 UID</p>
-
-                </div>
-
-            </div>
-
-            <!-- TEAM5 -->
-
-            <div class="menu-item"
-            onclick="openModal('modal-team5')">
-
-                <i class="fa-solid fa-users-gear"></i>
-
-                <div class="menu-text">
-
-                    <h3>Team 5</h3>
-
-                    <p>Nhập 1 UID</p>
-
-                </div>
-
-            </div>
-
-            <!-- LAG -->
-
-            <div class="menu-item"
-            onclick="openModal('modal-troll')">
-
-                <i class="fa-solid fa-ghost"></i>
-
-                <div class="menu-text">
-
-                    <h3>Troll Lag 5 6</h3>
-
-                    <p>Nhập 1 UID</p>
-
-                </div>
-
-            </div>
-
-        </div>
-
-        <div class="footer">
-
-            Số người Truy Cập :
-            {{ visits }}
-
-        </div>
-
-    </div>
-
-    <!-- MODAL EMOTE -->
-
-    <div id="modal-emote"
-    class="modal">
-
-        <div class="modal-content">
-
-            <div class="modal-header">
-
-                EMOTE
-
-                <i class="fa-solid fa-xmark"
-                onclick="closeModal()"></i>
-
-            </div>
-
-            <input type="text"
-            placeholder="Nhập Team Code...">
-
-            <input type="text"
-            placeholder="UID 1">
-
-            <input type="text"
-            placeholder="UID 2">
-
-            <input type="text"
-            placeholder="UID 3">
-
-            <input type="text"
-            placeholder="UID 4">
-
-            <input type="text"
-            placeholder="UID 5">
-
-            <!-- MENU BIẾN HÌNH -->
-            <select id="skin-select">
-                <option value="">-- Chọn Biến Hình --</option>
-                <option value="914000002">Rampage</option>
-                <option value="914000003">Cannibal</option>
-                <option value="914038001">Devil</option>
-                <option value="914039001">Scorpio</option>
-                <option value="914042001">Frostfire</option>
-                <option value="914044001">Paradox</option>
-                <option value="914047001">Naruto</option>
-                <option value="914047002">Aurora</option>
-                <option value="914048001">Midnight</option>
-                <option value="914050001">Itachi</option>
-                <option value="91">Dreamspace</option>
-            </select>
-
-            <button class="btn-submit"
-            onclick="startEmote()">
-
-                Xác Nhận
-
-            </button>
-
-        </div>
-
-    </div>
-
-    <!-- MODAL TEAM5 -->
-
-    <div id="modal-team5"
-    class="modal">
-
-        <div class="modal-content">
-
-            <div class="modal-header">
-
-                TEAM 5
-
-                <i class="fa-solid fa-xmark"
-                onclick="closeModal()"></i>
-
-            </div>
-
-            <input type="text"
-            placeholder="Nhập UID...">
-
-            <button class="btn-submit"
-            onclick="startTeam5()">
-
-                Kích Hoạt
-
-            </button>
-
-        </div>
-
-    </div>
-
-    <!-- MODAL LAG -->
-
-    <div id="modal-troll"
-    class="modal">
-
-        <div class="modal-content">
-
-            <div class="modal-header">
-
-                TROLL LAG
-
-                <i class="fa-solid fa-xmark"
-                onclick="closeModal()"></i>
-
-            </div>
-
-            <input type="text"
-            placeholder="Nhập UID đối tượng...">
-
-            <button class="btn-submit"
-            onclick="startLag()">
-
-                Triển Khai
-
-            </button>
-
-        </div>
-
-    </div>
-
-    <!-- TOAST -->
-
-    <div id="toast">
-
-        SUCCESS ✓
-
-    </div>
-
-    <script>
-
-        function openModal(id){
-
-            document.getElementById(id)
-            .style.display='flex';
-
-        }
-
-        function closeModal(){
-
-            const modals =
-            document.querySelectorAll('.modal');
-
-            modals.forEach(m=>{
-
-                m.style.display='none';
-
-            });
-
-        }
-
-        async function callAPI(url,payload){
-
-            const toast =
-            document.getElementById('toast');
-
-            try{
-
-                const response =
-                await fetch(url,{
-
-                    method:"POST",
-
-                    headers:{
-
-                        "Content-Type":
-                        "application/json"
-
-                    },
-
-                    body:
-                    JSON.stringify(payload)
-
-                });
-
-                const data =
-                await response.json();
-
-                toast.innerText =
-                data.message;
-
-            }
-
-            catch(err){
-
-                toast.innerText =
-                "SERVER ERROR";
-
-            }
-
-            toast.classList.add('show');
-
-            setTimeout(()=>{
-
-                toast.classList.remove('show');
-
-            },3000);
-
-        }
-
-        // EMOTE
-
-        async function startEmote(){
-
-            const inputs =
-            document.querySelectorAll(
-            "#modal-emote input"
-            );
-            
-            const skinSelect = document.getElementById('skin-select');
-
-            await callAPI("/api/emote",{
-
-                tc:inputs[0].value,
-
-                uid1:inputs[1].value,
-                uid2:inputs[2].value,
-                uid3:inputs[3].value,
-                uid4:inputs[4].value,
-                uid5:inputs[5].value,
-                
-                skin: skinSelect.value // Thêm giá trị biến hình vào payload
-
-            });
-
-            closeModal();
-
-        }
-
-        // TEAM5
-
-        async function startTeam5(){
-
-            const uid =
-            document.querySelector(
-            "#modal-team5 input"
-            ).value;
-
-            await callAPI("/api/team5",{
-
-                uid:uid
-
-            });
-
-            closeModal();
-
-        }
-
-        // LAG
-
-        async function startLag(){
-
-            const uid =
-            document.querySelector(
-            "#modal-troll input"
-            ).value;
-
-            await callAPI("/api/lag",{
-
-                uid:uid
-
-            });
-
-            closeModal();
-
-        }
-
-        window.onclick=function(e){
-
-            if(
-                e.target.className==='modal'
-            ){
-
-                closeModal();
-
-            }
-
-        }
-
-    </script>
+<nav><div class="logo">M4</div></nav>
+
+<div class="container">
+
+<div class="header-section">
+<h1 class="brand-name">m4 status</h1>
+<span class="status-badge">✓ Đang hoạt động</span>
+</div>
+
+<div class="menu-grid">
+
+<div class="menu-item" onclick="openModal('modal-emote')">
+<i class="fa-solid fa-face-grin-tears"></i>
+<div class="menu-text"><h3>Emote</h3><p>Team Code & 5 UID</p></div>
+</div>
+
+<div class="menu-item" onclick="openModal('modal-team5')">
+<i class="fa-solid fa-users-gear"></i>
+<div class="menu-text"><h3>Team 5</h3><p>Nhập 1 UID</p></div>
+</div>
+
+<div class="menu-item" onclick="openModal('modal-troll')">
+<i class="fa-solid fa-ghost"></i>
+<div class="menu-text"><h3>Troll Lag 5 6</h3><p>Nhập 1 UID</p></div>
+</div>
+
+</div>
+
+<div class="footer">Số người Truy Cập : {{ visits }}</div>
+
+</div>
+
+<!-- EMOTE -->
+<div id="modal-emote" class="modal">
+<div class="modal-content">
+<div class="modal-header">EMOTE <i onclick="closeModal()" class="fa-solid fa-xmark"></i></div>
+
+<input placeholder="Team Code">
+<input placeholder="UID 1">
+<input placeholder="UID 2">
+<input placeholder="UID 3">
+<input placeholder="UID 4">
+<input placeholder="UID 5">
+
+<select id="skin-select">
+<option value="">-- Skin --</option>
+<option value="914000002">Rampage</option>
+<option value="914000003">Cannibal</option>
+<option value="914038001">Devil</option>
+<option value="914039001">Scorpio</option>
+<option value="914042001">Frostfire</option>
+<option value="914044001">Paradox</option>
+<option value="914047001">Naruto</option>
+<option value="914047002">Aurora</option>
+<option value="914048001">Midnight</option>
+<option value="914050001">Itachi</option>
+<option value="914051001">Dreamspace</option>
+</select>
+
+<button class="btn-submit" onclick="startEmote()">Xác Nhận</button>
+</div>
+</div>
+
+<!-- TEAM5 -->
+<div id="modal-team5" class="modal">
+<div class="modal-content">
+<div class="modal-header">TEAM 5 <i onclick="closeModal()" class="fa-solid fa-xmark"></i></div>
+<input placeholder="UID">
+<button class="btn-submit" onclick="startTeam5()">Kích Hoạt</button>
+</div>
+</div>
+
+<!-- LAG -->
+<div id="modal-troll" class="modal">
+<div class="modal-content">
+<div class="modal-header">TROLL LAG <i onclick="closeModal()" class="fa-solid fa-xmark"></i></div>
+<input placeholder="UID">
+<button class="btn-submit" onclick="startLag()">Triển Khai</button>
+</div>
+</div>
+
+<div id="toast">SUCCESS</div>
+
+<script>
+function openModal(id){document.getElementById(id).style.display='flex'}
+function closeModal(){document.querySelectorAll('.modal').forEach(m=>m.style.display='none')}
+
+async function callAPI(url,payload){
+const toast=document.getElementById('toast');
+try{
+const r=await fetch(url,{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify(payload)});
+const d=await r.json();
+toast.innerText=d.message;
+}catch(e){toast.innerText="SERVER ERROR";}
+toast.classList.add('show');
+setTimeout(()=>toast.classList.remove('show'),3000);
+}
+
+function startEmote(){
+const i=document.querySelectorAll("#modal-emote input");
+const s=document.getElementById("skin-select");
+callAPI("/api/emote",{tc:i[0].value,uid1:i[1].value,uid2:i[2].value,uid3:i[3].value,uid4:i[4].value,uid5:i[5].value,skin:s.value});
+closeModal();
+}
+
+function startTeam5(){
+const uid=document.querySelector("#modal-team5 input").value;
+callAPI("/api/team5",{uid});
+closeModal();
+}
+
+function startLag(){
+const uid=document.querySelector("#modal-troll input").value;
+callAPI("/api/lag",{uid});
+closeModal();
+}
+</script>
 
 </body>
 </html>
