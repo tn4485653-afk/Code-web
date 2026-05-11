@@ -203,7 +203,7 @@ def send_emote(tc, uid_list, emote_id):
     try:
 
         url = (
-            "https://emote-bi-n-h-nh.onrender.com/join"
+            "https://emote-bi-n-h-nh-1l.onrender.com/join"
             f"?tc={tc}"
             f"&uid1={uid_list[0]}"
             f"&uid2={uid_list[1]}"
@@ -233,7 +233,7 @@ def send_skin(tc, skin_id):
         name = SKIN_MAP.get(skin_id, "rampage")
 
         url = (
-            "https://emote-bi-n-h-nh.onrender.com/bundle"
+            "https://emote-bi-n-h-nh-1l.onrender.com/bundle"
             f"?tc={tc}"
             f"&name={name}"
         )
